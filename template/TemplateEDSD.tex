@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%															%%
+%% 															%%
+%%     PRESENTATIONS IN LATEX %% PRESENTATIONS IN LATEX     %% 
+%%     PRESENTATIONS IN LATEX %% PRESENTATIONS IN LATEX  	%%
+%%												   			%%
+%% 		Template file for the 2018/2019 EDSD cohort 		%%
+%%															%%
+%% 		Start date:   29/01/2018							%%
+%%		Last update:  29/01/2019							%%
+%% 		Author: Ugofilippo Basellini						%%
+%% 		Email:  ugofilippo.basellini@ined.fr				%%
+%%															%%
+%%															%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% declare your documentclass as beamer
+\documentclass[11pt]{beamer}
+
+%%%%% choose your presentation's background colors.
+%%%%% For a combination of themes and color themes, see:
+%%%%% https://hartwork.org/beamer-theme-matrix/
+\mode<presentation>{
+	\usetheme{Warsaw}     	 % choose your presentation theme 
+	\usecolortheme{beaver}  % choose your color theme
+	% \setbeamercovered{transparent}   % comment out if you want visible overlays	
+}
+
+%% load some standard packages 
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{mathptmx}
+\usepackage{textpos}
+\usepackage{setspace}      % Modify line spacing
+
+%% your presentation title (short and long)
+\title[Short Title]{My first presentation in \LaTeX}
+
+%% your presentation subtitle (if you have one)
+\subtitle{Learning the \texttt{BEAMER} class} 
+
+%% authors
+\author[Author1, Author2] % (optional, use only with lots of authors)
+{F.~Author\inst{1} \and S.~Author\inst{2}}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+%% institutions
+\institute[Universities XX and YY] % (optional, but mostly needed)
+{
+	\inst{1}%
+	Department of F.~Author \\
+	University XX
+	\and
+	\inst{2}%
+	Department of S.~Author \\
+	University YY}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+%% date
+\date[EDSD 2018-2019] % (optional, should be abbreviation of conference name)
+{Conference - Date}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+% Table of contents options (uncomment if you need to use the TOC):
+%\AtBeginSection[]{
+%	\begin{frame}<beamer>{Outline}
+%	\tableofcontents[currentsection,currentsubsection]
+%	\end{frame}
+%}
+
+%% add a LOGO in the upper right corner
+\addtobeamertemplate{frametitle}{}{
+	\begin{textblock*}{100mm}(.91\textwidth,-1.79cm)
+		\includegraphics[scale=0.17]{EDSDLogo}
+	\end{textblock*}
+}
+
+%% do not show the navigation bar
+\beamertemplatenavigationsymbolsempty
+
+%% add frame numbers
+\setbeamertemplate{footline}
+{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\insertframenumber
+		\end{beamercolorbox}%		
+	}%
+}
+
+
+%% START YOUR DOCUMENT
+\begin{document}
+
+%% TITLE FRAME 
+\begin{frame}    % First frame
+\titlepage
+\end{frame}	
+
+%% TABLE OF COMMENTS FRAME
+%% uncomment if you want to see the table of comments
+%\begin{frame}{Outline}
+%\tableofcontents
+%% You might wish to add the option [pausesections]
+%\end{frame}
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Motivation}   % First Section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Second frame
+\frametitle{Introduction}
+\begin{itemize}
+\setlength\itemsep{2em}		
+\item Background facts:
+	\begin{itemize}
+	\item it is well known that ...
+	\item xx is a relevant issue ...
+	\end{itemize}
+\item Short overview of literature
+	\begin{itemize}
+	\item yy have shown that ...
+	\item zz demonstrated that ...
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Third frame
+\frametitle{The Research Questions}
+Our main research questions are:
+\bigskip
+\begin{enumerate}
+\setlength\itemsep{2em}	
+\item is there any relationship between xx and yy?
+\item if so, has the relationship changed over time? 
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Methodology}   % Second Section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\subsection{The data}   % Optional
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Fourth frame
+\frametitle{The XYZ dataset}
+%\framesubtitle{Subtitles are optional}
+Here you can talk about your data. \\
+\bigskip
+Suggestions:
+\begin{itemize}
+\setlength\itemsep{2em}	
+\item Use \texttt{itemize} or \texttt{enumerate} a lot.
+\item Use very short sentences or short phrases.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\subsection{The model}    % Optional
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Fifth frame
+\frametitle{The model}
+Here you can talk about your model, including formulas and figures
+\bigskip
+\begin{equation}          
+y = {\color{blue}\beta_0} + \beta_1x + \epsilon\,,\,\,
+\epsilon \sim \mathcal{N}(0,\,\sigma^{2})
+\end{equation}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Results}   % Third Section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Sixth frame
+\frametitle{The Results}
+You may want to use a block to highlight your results 
+\bigskip
+\begin{block}{Here is your block title}
+	\begin{itemize}
+	\setlength\itemsep{1.5em}	
+	\item<1-> We have observed that ...
+	\item<2-> It is also interesting to notice that ...  
+	\end{itemize}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Seventh frame
+\frametitle{The Results}
+And you can include an image: 
+\bigskip
+\begin{center}
+\includegraphics[scale=.7]{EDSDLogo}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Conclusions}   % Fourth Section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Eigth frame
+\frametitle{Summary}
+You can create overlays \dots
+\begin{itemize}
+\setlength\itemsep{1.2em}	
+\item using the \texttt{pause} command:
+	\begin{itemize}
+	\setlength\itemsep{0.5em}	
+	\item First item.
+	\pause
+	\item Second item.
+	\end{itemize}
+\item using overlay specifications:
+	\begin{itemize}
+	\setlength\itemsep{0.5em}	
+	\item<3-> First item.
+	\item<4-> Second item.
+	\end{itemize}
+\item<5-> using the general \texttt{uncover} command:
+	\begin{itemize}
+	\setlength\itemsep{0.5em}	
+	\uncover<5->{\item First item.}
+	\uncover<6->{\item Second item.}
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}          % Last frame
+\frametitle{$\,$}
+\vspace{0.1cm}
+\begin{center}
+	\begin{LARGE}
+		Do not forget to thank the audience!!
+	\end{LARGE}
+\end{center}
+\bigskip
+\end{frame}
+
+\end{document}
